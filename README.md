@@ -25,7 +25,6 @@ A professional full-stack web developer portfolio showcasing my skills, projects
 
 ### Development & Hosting
 * **Laragon** (for local development server)
-* [Add any other tools or services you used, e.g., Git, GitHub, etc.]
 
 ## How to Run Locally
 
