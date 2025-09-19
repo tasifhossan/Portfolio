@@ -32,12 +32,12 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/](https://github.com/)[YourGitHubUsername]/[YourRepositoryName].git
+    ```bash git clone https://github.com/tasifhossan/Portfolio.git `
     ```
 
 2.  **Navigate to the project directory:**
     ```sh
-    cd [YourRepositoryName]
+    cd portfolio
     ```
 
 3.  **Set up the local server:**
