@@ -628,6 +628,18 @@
                 
                 // Update page title
                 document.title = "Project Details | " + project.name;
+
+                // Handle pagination links (Previous / Next)
+                const keys = Object.keys(projectsData);
+                const currentIndex = keys.indexOf(projectId);
+
+                if (currentIndex !== -1) {
+                    const prevIndex = (currentIndex - 1 + keys.length) % keys.length;
+                    const nextIndex = (currentIndex + 1) % keys.length;
+
+                    $('.portfolio-details__pagination .left').attr('href', 'project-details.html?project=' + keys[prevIndex]);
+                    $('.portfolio-details__pagination .right').attr('href', 'project-details.html?project=' + keys[nextIndex]);
+                }
             }
         });
     </script>

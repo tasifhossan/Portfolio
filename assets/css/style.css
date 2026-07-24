@@ -5671,10 +5671,18 @@ About One
 
 .portfolio-details__img {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   border-radius: 20px;
   margin-top: 64px;
+}
+
+.portfolio-details__img img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 .portfolio-details__text {
