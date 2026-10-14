@@ -28,20 +28,21 @@ export function EducationSection() {
 
         {/* Two Timeline Cards with Sticky Year on Left */}
         <div className="space-y-5 md:space-y-6">
-          {/* Degree 1: B.Sc. CSE */}
+          {/* Degree 1: B.Sc. CSE at IIUC */}
           <Reveal delay={0.06} duration={0.45}>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6 bg-surface-pure border border-hairline p-5 md:p-8 hover:border-cobalt/30 transition-all duration-300 delay-0 hover:delay-[330ms] hover:shadow-xs">
               <div className="md:col-span-3 border-b md:border-b-0 md:border-r border-hairline pb-4 md:pb-0 md:pr-6 flex flex-col justify-between">
                 <div>
                   <span className="font-mono text-xl md:text-2xl font-bold text-cobalt block">
-                    2020 – 2024
+                    2023 – Present
                   </span>
                   <span className="font-mono text-[9px] md:text-[10px] text-muted uppercase mt-1 block tracking-wider">
-                    UNDERGRADUATE DEGREE
+                    UNDERGRADUATE // B.SC.
                   </span>
                 </div>
-                <div className="font-mono text-xs text-charcoal pt-3 md:pt-4">
-                  CGPA: <strong className="text-cobalt">3.82</strong> / 4.00
+                <div className="font-mono text-xs text-charcoal pt-3 md:pt-4 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="font-semibold text-emerald-600 dark:text-emerald-400">Currently Enrolled</span>
                 </div>
               </div>
               <div className="md:col-span-9 space-y-3">
@@ -50,38 +51,38 @@ export function EducationSection() {
                     B.Sc. in Computer Science &amp; Engineering
                   </h3>
                   <span className="inline-block font-mono text-[9px] md:text-[10px] px-2.5 py-0.5 bg-paper border border-hairline text-cobalt font-semibold w-fit">
-                    INTERNATIONAL ISLAMIC UNIV. CHITTAGONG
+                    IIUC — CHITTAGONG
                   </span>
                 </div>
                 <p className="font-body text-xs sm:text-sm text-muted leading-relaxed">
-                  Curriculum focused on Advanced Data Structures, Algorithmic Analysis, Operating Systems Internals, Database Management Systems, and Distributed Computing.
+                  International Islamic University Chittagong (IIUC). Curriculum focused on Algorithmic Problem Solving, Advanced Data Structures, Relational Database Management Systems, Operating Systems, Computer Architecture, and Object-Oriented Software Engineering.
                 </p>
                 <div className="p-3 bg-paper border border-hairline space-y-1">
                   <span className="font-mono text-[9px] md:text-[10px] text-muted uppercase tracking-wider block">
-                    FINAL THESIS:
+                    ACADEMIC FOCUS &amp; COURSEWORK:
                   </span>
                   <p className="font-body text-xs font-medium text-charcoal">
-                    &quot;Real-Time Distributed Queue Optimization and Dynamic Backpressure Control in Event-Driven Node.js Microservices&quot;
+                    Distributed Systems Foundations, Database Systems (PostgreSQL/SQL), Web Technologies, and Computational Algorithms.
                   </p>
                 </div>
               </div>
             </div>
           </Reveal>
 
-          {/* Degree 2: HSC */}
+          {/* Degree 2: HSC at Chittagong Cantonment Public College */}
           <Reveal delay={0.14} duration={0.45}>
             <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6 bg-surface-pure border border-hairline p-5 md:p-8 hover:border-cobalt/30 transition-all duration-300 delay-0 hover:delay-[330ms] hover:shadow-xs">
               <div className="md:col-span-3 border-b md:border-b-0 md:border-r border-hairline pb-4 md:pb-0 md:pr-6 flex flex-col justify-between">
                 <div>
                   <span className="font-mono text-xl md:text-2xl font-bold text-charcoal block">
-                    2018 – 2020
+                    2020 – 2022
                   </span>
                   <span className="font-mono text-[9px] md:text-[10px] text-muted uppercase mt-1 block tracking-wider">
-                    HIGHER SECONDARY
+                    HIGHER SECONDARY (HSC)
                   </span>
                 </div>
                 <div className="font-mono text-xs text-charcoal pt-3 md:pt-4">
-                  GPA: <strong className="text-charcoal">5.00</strong> / 5.00
+                  Division: <strong className="text-charcoal font-semibold">Science</strong>
                 </div>
               </div>
               <div className="md:col-span-9 space-y-3">
@@ -89,12 +90,12 @@ export function EducationSection() {
                   <h3 className="font-display text-lg sm:text-xl md:text-2xl font-bold text-charcoal">
                     Higher Secondary Certificate (HSC)
                   </h3>
-                  <span className="inline-block font-mono text-[9px] md:text-[10px] px-2.5 py-0.5 bg-paper border border-hairline text-muted font-semibold w-fit">
-                    PRE-ENGINEERING
+                  <span className="inline-block font-mono text-[9px] md:text-[10px] px-2.5 py-0.5 bg-paper border border-hairline text-charcoal font-semibold w-fit">
+                    CHITTAGONG CANTONMENT PUBLIC COLLEGE
                   </span>
                 </div>
                 <p className="font-body text-xs sm:text-sm text-muted leading-relaxed">
-                  Science Division — Board of Intermediate &amp; Secondary Education. Concentration in Higher Mathematics (Calculus &amp; Linear Algebra), Theoretical Physics, and Computer Fundamentals. Graduated with highest honors.
+                  Science Division — Chittagong Cantonment Public College (CCPC). Core concentrations in Higher Mathematics (Calculus, Trigonometry &amp; Algebra), Physics, Chemistry, and Information &amp; Communication Technology (ICT).
                 </p>
               </div>
             </div>

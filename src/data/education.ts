@@ -4,7 +4,7 @@ export interface EducationEntry {
   institution: string;
   location: string;
   years: string;
-  grade: string;
+  grade?: string;
   description: string;
   highlights?: string[];
 }
@@ -15,31 +15,25 @@ export const educationData: EducationEntry[] = [
     degree: "B.Sc. in Computer Science & Engineering",
     institution: "International Islamic University Chittagong (IIUC)",
     location: "Chittagong, Bangladesh",
-    // [YEARS] placeholder
-    years: "[YEARS] 2023 - Now",
-    // [CGPA] placeholder
-    grade: "[CGPA] CGPA: 3.80 / 4.00",
+    years: "2023 - Present",
     description:
-      "[EDIT ME] Rigorous curriculum focused on software engineering principles, algorithms, data structures, relational database systems, and computer networks.",
+      "Rigorous undergraduate curriculum focused on algorithmic foundations, data structures, relational database systems, operating systems, and distributed web architectures.",
     highlights: [
-      "[EDIT ME] Core Coursework: Distributed Systems, Database Management Systems, Object-Oriented Programming, Operating Systems.",
-      "[EDIT ME] Active member of the university programming contest club and technical student chapters.",
+      "Core Coursework: Data Structures & Algorithms, Database Management Systems, Object-Oriented Programming, Computer Networks, Operating Systems.",
+      "Active participant in competitive programming and collaborative software projects.",
     ],
   },
   {
     id: "edu-2",
     degree: "Higher Secondary Certificate (HSC) — Science",
-    // [INSTITUTION] placeholder
-    institution: "Chattogram Cantonment Public College",
+    institution: "Chittagong Cantonment Public College",
     location: "Chittagong, Bangladesh",
-    // [YEARS] placeholder
     years: "2020 - 2022",
-    // [GPA] placeholder
-    grade: "[GPA] GPA: 5.00 / 5.00",
+    grade: "Division: Science",
     description:
-      "[EDIT ME] Higher secondary education with a major in Physics, Chemistry, Higher Mathematics, and Information & Communication Technology.",
+      "Higher secondary education with a major in Physics, Chemistry, Higher Mathematics, and Information & Communication Technology.",
     highlights: [
-      "[EDIT ME] Graduated with honors in science stream with focus on mathematical problem solving.",
+      "Strong foundation in calculus, linear algebra, analytical physics, and computer fundamentals.",
     ],
   },
 ];
