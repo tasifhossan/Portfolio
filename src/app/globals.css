@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-cobalt: #1F4BFF;
+  --color-cobalt-dark: #0030C7;
+  --color-cobalt-light: #DEE0FF;
+  --color-paper: #F7F7F4;
+  --color-hairline: #E3E5EA;
+  --color-charcoal: #131C2A;
+  --color-muted: #5A5E6C;
+  --color-muted-light: #747688;
+  --color-surface-pure: #FFFFFF;
+
+  --font-display: var(--font-display), "Space Grotesk", sans-serif;
+  --font-body: var(--font-body), "Inter", sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", monospace;
+}
+
+:root {
+  --bg-paper: #F7F7F4;
+  --bg-surface: #FFFFFF;
+  --border-hairline: #E3E5EA;
+  --text-charcoal: #131C2A;
+  --text-muted: #5A5E6C;
+  --text-muted-light: #747688;
+  --accent-cobalt: #1F4BFF;
+}
+
+.dark {
+  --bg-paper: #0B0F19;
+  --bg-surface: #111726;
+  --border-hairline: #1F2A3F;
+  --text-charcoal: #F1F4F9;
+  --text-muted: #8E96A8;
+  --text-muted-light: #647087;
+  --accent-cobalt: #3B66FF;
+}
+
+.dark {
+  --color-paper: #0B0F19;
+  --color-surface-pure: #111726;
+  --color-hairline: #1F2A3F;
+  --color-charcoal: #F1F4F9;
+  --color-muted: #8E96A8;
+  --color-muted-light: #647087;
+  --color-cobalt-light: #1A284D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.33s ease, color 0.33s ease;
+}
+
+/* Architectural 24px drafting grid */
+.drafting-grid {
+  background-size: 24px 24px;
+  background-image: radial-gradient(#D8DAE2 1px, transparent 1px);
+}
+
+.dark .drafting-grid {
+  background-size: 24px 24px;
+  background-image: radial-gradient(#1E293B 1px, transparent 1px);
+}
+
+.arch-frame {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Clean marquee scroll animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 26s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hero Keyframe Animations (Zero LCP delay, pure CSS) */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes archClipReveal {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes chipFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes chipFloatAlt {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+.animate-hero-fade {
+  animation: heroFadeUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-arch-reveal {
+  animation: archClipReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-chip-float {
+  animation: chipFloat 4.2s ease-in-out infinite;
+}
+
+.animate-chip-float-alt {
+  animation: chipFloatAlt 5.2s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #253347;
+}
+
+/* Selection */
+::selection {
+  background-color: #1F4BFF;
+  color: #ffffff;
+}
+
+/* Accessible prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee,
+  .animate-chip-float,
+  .animate-chip-float-alt,
+  .animate-ping,
+  .animate-hero-fade,
+  .animate-arch-reveal {
+    animation: none !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}

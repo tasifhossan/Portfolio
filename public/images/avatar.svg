@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0d13"/>
+      <stop offset="100%" stop-color="#161b26"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <rect width="400" height="400" fill="url(#avatarBg)" rx="200"/>
+  <!-- Hairline Geometric Ring -->
+  <circle cx="200" cy="200" r="186" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="4,6" opacity="0.6"/>
+  <!-- Minimalist Head & Shoulders Silhouette -->
+  <circle cx="200" cy="155" r="60" fill="#334155"/>
+  <path d="M 105 320 C 105 245, 145 220, 200 220 C 255 220, 295 245, 295 320 Z" fill="#334155"/>
+  <!-- Monogram F badge with Cobalt -->
+  <circle cx="270" cy="265" r="30" fill="#2563eb"/>
+  <text x="270" y="276" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="900" fill="#ffffff" text-anchor="middle">F</text>
+</svg>
