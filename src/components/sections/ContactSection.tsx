@@ -383,7 +383,7 @@ export function ContactSection() {
                   </div>
                   <button
                     disabled={isSubmitting}
-                    className="w-full py-3 md:py-3.5 bg-cobalt text-white font-display font-semibold text-xs md:text-sm tracking-tight hover:bg-charcoal transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75 active:scale-[0.99]"
+                    className="w-full py-3 md:py-3.5 bg-cobalt text-white font-display font-semibold text-xs md:text-sm tracking-tight hover:bg-cobalt-dark dark:hover:bg-cobalt-dark transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75 active:scale-[0.99]"
                     type="submit"
                   >
                     {isSubmitting ? (

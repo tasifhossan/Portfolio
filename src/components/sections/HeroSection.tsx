@@ -151,7 +151,7 @@ export function HeroSection() {
                   transform: `translate3d(${magneticOffset.x}px, ${magneticOffset.y}px, 0)`,
                   transition: magneticOffset.x === 0 ? "transform 0.25s ease-out" : "none",
                 }}
-                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 bg-cobalt text-white font-display font-semibold text-xs sm:text-sm tracking-tight hover:bg-charcoal transition-colors shadow-none cursor-pointer"
+                className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 bg-cobalt text-white font-display font-semibold text-xs sm:text-sm tracking-tight hover:bg-cobalt-dark dark:hover:bg-cobalt-dark transition-colors shadow-none cursor-pointer"
               >
                 <span>View Projects</span>
                 <span>→</span>
