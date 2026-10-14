@@ -60,7 +60,7 @@ export function AboutSection() {
                   className="w-full h-full object-cover object-top grayscale contrast-110"
                 />
                 {/* Rotated Vertical Monospace Label */}
-                <div className="absolute top-3 sm:top-4 left-2 z-10 writing-vertical rotate-180 font-mono text-[9px] sm:text-[10px] tracking-widest text-white/90 bg-charcoal/80 px-1 py-1.5 sm:py-2 backdrop-blur-xs">
+                <div className="absolute top-3 sm:top-4 left-2 z-10 writing-vertical rotate-180 font-mono text-[9px] sm:text-[10px] tracking-widest text-white/90 bg-[#0B0F19]/90 px-1 py-1.5 sm:py-2 backdrop-blur-xs">
                   TASIF / FULL-STACK / BANGLADESH
                 </div>
               </div>
@@ -120,7 +120,7 @@ export function AboutSection() {
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-1">
               <a
                 href="#contact"
-                className="px-4 sm:px-5 py-2 sm:py-2.5 bg-cobalt text-white font-display font-semibold text-xs tracking-wide hover:bg-charcoal transition-colors cursor-pointer"
+                className="px-4 sm:px-5 py-2 sm:py-2.5 bg-cobalt text-white font-display font-semibold text-xs tracking-wide hover:bg-cobalt-dark dark:hover:bg-cobalt-dark transition-colors cursor-pointer"
               >
                 Let&apos;s Work Together →
               </a>

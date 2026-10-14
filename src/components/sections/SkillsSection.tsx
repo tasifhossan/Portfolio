@@ -183,9 +183,9 @@ const skillCategories: SkillCategory[] = [
     iconBg: "bg-cobalt",
     skills: [
       { name: "JavaScript", badge: "JS", badgeBg: "bg-[#F7DF1E]", badgeText: "text-charcoal", percentage: 98 },
-      { name: "TypeScript", badge: "TS", badgeBg: "bg-charcoal", badgeText: "text-white", percentage: 92 },
+      { name: "TypeScript", badge: "TS", badgeBg: "bg-[#3178C6]", badgeText: "text-white", percentage: 92 },
       { name: "React.js", badge: "⚛", badgeBg: "bg-cobalt", badgeText: "text-white", percentage: 90 },
-      { name: "Next.js", badge: "N", badgeBg: "bg-charcoal", badgeText: "text-white", percentage: 88 },
+      { name: "Next.js", badge: "N", badgeBg: "bg-[#111726] border border-white/20", badgeText: "text-white", percentage: 88 },
       { name: "Tailwind CSS", badge: "TW", badgeBg: "bg-[#06B6D4]", badgeText: "text-white", percentage: 92 },
       { name: "HTML5", badge: "5", badgeBg: "bg-[#E34F26]", badgeText: "text-white", percentage: 95 },
       { name: "CSS3", badge: "3", badgeBg: "bg-[#1572B6]", badgeText: "text-white", percentage: 90 },
@@ -198,9 +198,9 @@ const skillCategories: SkillCategory[] = [
     iconBg: "bg-emerald-500",
     skills: [
       { name: "Node.js", badge: "JS", badgeBg: "bg-emerald-500", badgeText: "text-white", percentage: 92 },
-      { name: "Express.js", badge: "EX", badgeBg: "bg-charcoal", badgeText: "text-white", percentage: 90 },
+      { name: "Express.js", badge: "EX", badgeBg: "bg-[#1E293B] border border-white/10", badgeText: "text-white", percentage: 90 },
       { name: "REST API", badge: "API", badgeBg: "bg-cobalt", badgeText: "text-white", percentage: 95 },
-      { name: "JWT Auth", badge: "JWT", badgeBg: "bg-charcoal", badgeText: "text-white", percentage: 88 },
+      { name: "JWT Auth", badge: "JWT", badgeBg: "bg-[#9333EA]", badgeText: "text-white", percentage: 88 },
       { name: "Prisma ORM", badge: "▲", badgeBg: "bg-cobalt", badgeText: "text-white", percentage: 90 },
     ],
   },
@@ -208,7 +208,7 @@ const skillCategories: SkillCategory[] = [
     title: "Database",
     countText: "3 TECHNOLOGIES",
     iconType: "database",
-    iconBg: "bg-charcoal",
+    iconBg: "bg-[#4F46E5] dark:bg-[#6366F1]",
     footerNote: "ACID COMPLIANCE · DISTRIBUTED REPLICATION · MEMORY TIERS",
     skills: [
       { name: "PostgreSQL & SQL", badge: "PG", badgeBg: "bg-[#336791]", badgeText: "text-white", percentage: 90 },
@@ -225,7 +225,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Git & GitHub", badge: "GIT", badgeBg: "bg-[#F05032]", badgeText: "text-white", percentage: 92 },
       { name: "Docker", badge: "DK", badgeBg: "bg-[#2496ED]", badgeText: "text-white", percentage: 85 },
       { name: "VS Code", badge: "VS", badgeBg: "bg-[#007ACC]", badgeText: "text-white", percentage: 95 },
-      { name: "Linux / Bash", badge: "SH", badgeBg: "bg-charcoal", badgeText: "text-white", percentage: 85 },
+      { name: "Linux / Bash", badge: "SH", badgeBg: "bg-[#1E293B] border border-white/10", badgeText: "text-white", percentage: 85 },
       { name: "CI/CD Pipelines", badge: "CI", badgeBg: "bg-cobalt", badgeText: "text-white", percentage: 80 },
     ],
   },
@@ -239,7 +239,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Figma", badge: "FG", badgeBg: "bg-[#F24E1E]", badgeText: "text-white", percentage: 85 },
       { name: "Responsive UI", badge: "UI", badgeBg: "bg-cobalt", badgeText: "text-white", percentage: 95 },
-      { name: "Framer Motion", badge: "FM", badgeBg: "bg-charcoal", badgeText: "text-white", percentage: 82 },
+      { name: "Framer Motion", badge: "FM", badgeBg: "bg-[#FF0055]", badgeText: "text-white", percentage: 82 },
     ],
   },
 ];

@@ -52,7 +52,7 @@ export function ExperienceSection() {
             <div className="pt-2 w-full sm:w-auto">
               <Link
                 href="#contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-2.5 sm:py-3 bg-cobalt text-white font-display font-semibold text-xs sm:text-sm tracking-tight hover:bg-charcoal transition-all hover:shadow-xs active:scale-[0.98] cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-2.5 sm:py-3 bg-cobalt text-white font-display font-semibold text-xs sm:text-sm tracking-tight hover:bg-cobalt-dark dark:hover:bg-cobalt-dark transition-all hover:shadow-xs active:scale-[0.98] cursor-pointer"
               >
                 <span>Initiate Conversation</span>
                 <span>→</span>
