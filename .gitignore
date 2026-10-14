@@ -43,3 +43,6 @@ next-env.d.ts
 # lighthouse audit reports
 lighthouse-*.json
 
+# next 16 ai agent instructions
+AGENTS.md
+

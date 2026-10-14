@@ -7,13 +7,13 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Production portfolio of Mohammad Tasif Hossan, full-stack and backend systems architect.",
     start_url: "/",
     display: "standalone",
-    background_color: "#090d16",
-    theme_color: "#06b6d4",
+    background_color: "#0B0F19",
+    theme_color: "#1F4BFF",
     icons: [
       {
-        src: "/favicon.ico",
+        src: "/icon.svg",
         sizes: "any",
-        type: "image/x-icon",
+        type: "image/svg+xml",
       },
     ],
   };

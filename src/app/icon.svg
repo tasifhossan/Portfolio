@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1422"/>
+      <stop offset="100%" stop-color="#070A10"/>
+    </linearGradient>
+    <linearGradient id="cobaltGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B66FF"/>
+      <stop offset="100%" stop-color="#1F4BFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Squircle Badge -->
+  <rect x="0.5" y="0.5" width="31" height="31" rx="8" fill="url(#bg)" stroke="#1F4BFF" stroke-width="1.2" stroke-opacity="0.85"/>
+
+  <!-- Architectural 'T' Monogram -->
+  <!-- Horizontal Top Bar (Cobalt Accent) -->
+  <rect x="6.5" y="7.5" width="19" height="4.5" rx="1" fill="url(#cobaltGrad)"/>
+  
+  <!-- Vertical Stem (Crisp Pure White) -->
+  <rect x="13.75" y="12" width="4.5" height="13" rx="1" fill="#FFFFFF"/>
+
+  <!-- Technical Precision Dot -->
+  <circle cx="23.5" cy="23.5" r="1.5" fill="#1F4BFF"/>
+</svg>

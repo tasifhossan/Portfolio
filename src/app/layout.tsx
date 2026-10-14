@@ -51,6 +51,9 @@ export const metadata: Metadata = {
     "Express.js",
     "Prisma",
   ],
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
