@@ -97,7 +97,7 @@ export function HeroSection() {
       </div>
 
       {/* Hero Main Stage */}
-      <div className="max-w-[1440px] w-full mx-auto px-4 md:px-10 my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-4">
+      <div className="max-w-[1280px] w-full mx-auto px-4 sm:px-6 md:px-8 lg:pl-10 lg:pr-[76px] my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-4 lg:py-6">
         {/* Left Hero Column: Typography & Direct Action */}
         <div className="lg:col-span-7 flex flex-col items-start space-y-4">
           {/* Open to Work Status Pill (Step 1: 330ms) */}
@@ -209,72 +209,75 @@ export function HeroSection() {
         </div>
 
         {/* Right Hero Column: Arch Portrait + Floating Chips + Status Card */}
-        <div className="lg:col-span-5 relative flex justify-center lg:justify-end items-center pt-2 sm:pt-0">
-          <div className="relative w-[240px] sm:w-[280px] lg:w-[300px] h-[300px] sm:h-[400px] lg:h-[420px]">
-            {/* Offset Cobalt Hairline Frame */}
-            <div className="absolute inset-0 translate-x-2.5 translate-y-2.5 lg:translate-x-3 lg:translate-y-3 border-2 border-cobalt arch-frame pointer-events-none" />
-
-            {/* Image Container with Geometric Clip-Path Wipe */}
+        <div className="lg:col-span-5 w-full flex flex-col items-center justify-center p-4">
+          <div className="relative w-[clamp(260px,76vw,290px)] md:w-[320px] lg:w-[clamp(280px,26vw,370px)] aspect-[4/5] justify-self-center">
+            {/* Offset Cobalt Hairline Outline: Sibling inside wrapper bounds */}
             <div
-              className="animate-arch-reveal relative w-full h-full arch-frame border border-hairline overflow-hidden bg-surface-pure z-10 flex items-center justify-center"
-              style={{ animationDelay: "330ms" }}
-            >
+              className="absolute inset-0 translate-x-3 translate-y-3 border-2 border-cobalt arch-frame pointer-events-none z-0"
+              aria-hidden="true"
+            />
+
+            {/* Arch-Shaped Portrait Image Container with Clip/Rounded Top */}
+            <div className="relative w-full h-full arch-frame border border-hairline overflow-hidden bg-surface-pure z-10">
               <Image
                 src="/images/profile.png"
                 alt="Mohammad Tasif Hossan (Tasif) Full-Stack Developer Architectural Portrait"
-                width={300}
-                height={420}
+                fill
+                sizes="(min-width: 1024px) 420px, 70vw"
                 priority
-                className="w-full h-full object-cover object-top grayscale contrast-110"
+                className="object-cover object-top grayscale contrast-110"
               />
             </div>
 
-            {/* Gently Floating Tech Chips (2-4px drift keyframes) */}
+            {/* Tech Chips: Absolutely positioned relative to the visual wrapper using percentages */}
+            {/* [Node.js] top 6%, left -8% */}
             <div
-              className="animate-chip-float absolute -top-2 -left-2 sm:-left-4 z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-charcoal shadow-none select-none"
-              style={{ animationDelay: "0.33s" }}
+              className="animate-chip-float absolute z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-charcoal shadow-none select-none"
+              style={{ top: "6%", left: "-8%", animationDelay: "0.33s" }}
             >
               [Node.js]
             </div>
+
+            {/* [Express] top 22%, right -10% (hidden on mobile <768px) */}
             <div
-              className="animate-chip-float-alt absolute top-14 sm:top-16 -right-3 sm:-right-6 z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-cobalt shadow-none select-none"
-              style={{ animationDelay: "1.13s" }}
+              className="animate-chip-float-alt hidden sm:block absolute z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-cobalt shadow-none select-none"
+              style={{ top: "22%", right: "-10%", animationDelay: "1.13s" }}
             >
               [Express]
             </div>
+
+            {/* [TypeScript] top 52%, left -12% */}
             <div
-              className="animate-chip-float absolute top-1/2 -left-4 sm:-left-8 z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-charcoal shadow-none select-none"
-              style={{ animationDelay: "1.73s" }}
+              className="animate-chip-float absolute z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-charcoal shadow-none select-none"
+              style={{ top: "52%", left: "-12%", animationDelay: "1.73s" }}
             >
               [TypeScript]
             </div>
+
+            {/* [PostgreSQL] bottom 24%, right -10% */}
             <div
-              className="animate-chip-float-alt absolute bottom-16 sm:bottom-24 -right-3 sm:-right-6 z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-cobalt sm:text-charcoal shadow-none select-none"
-              style={{ animationDelay: "2.43s" }}
+              className="animate-chip-float-alt absolute z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-cobalt shadow-none select-none"
+              style={{ bottom: "24%", right: "-10%", animationDelay: "2.43s" }}
             >
               [PostgreSQL]
             </div>
+
+            {/* [Next.js] bottom 4%, right 4% (hidden on mobile <768px) */}
             <div
-              className="animate-chip-float hidden sm:block absolute bottom-10 -left-6 z-20 bg-surface-pure border border-hairline px-2.5 py-0.5 font-mono text-[11px] font-bold text-charcoal shadow-none select-none"
-              style={{ animationDelay: "0.83s" }}
-            >
-              [Prisma]
-            </div>
-            <div
-              className="animate-chip-float-alt hidden sm:block absolute -bottom-2 right-4 z-20 bg-surface-pure border border-hairline px-2.5 py-0.5 font-mono text-[11px] font-bold text-cobalt shadow-none select-none"
-              style={{ animationDelay: "2.03s" }}
+              className="animate-chip-float hidden sm:block absolute z-20 bg-surface-pure border border-hairline px-2 sm:px-2.5 py-0.5 font-mono text-[10px] sm:text-[11px] font-bold text-charcoal shadow-none select-none"
+              style={{ bottom: "4%", right: "4%", animationDelay: "0.83s" }}
             >
               [Next.js]
             </div>
 
-            {/* Architectural Floating Status Card (Desktop) */}
-            <div className="hidden sm:block absolute -bottom-6 -left-6 z-30 bg-surface-pure border border-hairline p-3 max-w-[200px] space-y-1">
-              <div className="flex items-center justify-between">
+            {/* Status card: anchored to wrapper's bottom-left (left -16px, bottom -20px) on sm+ */}
+            <div className="hidden sm:block absolute -left-4 -bottom-5 z-30 bg-surface-pure border border-hairline p-3 max-w-[210px] space-y-1 shadow-xs">
+              <div className="flex items-center justify-between gap-3">
                 <span className="font-mono text-[9px] text-muted tracking-widest uppercase">LOCATION</span>
                 <span className="font-mono text-[10px] font-bold text-charcoal">CHITTAGONG, BD</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="font-mono text-[10px] font-bold text-emerald-700 dark:text-emerald-400 uppercase">
                   Open to work
                 </span>
@@ -283,11 +286,22 @@ export function HeroSection() {
                 {localTime} • Local Time
               </p>
             </div>
+          </div>
 
-            {/* Mobile Time Tag */}
-            <div className="sm:hidden absolute -bottom-3 left-2 z-20 bg-surface-pure border border-hairline px-2.5 py-1 font-mono text-[10px] font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>{localTime}</span>
+          {/* Mobile status card: placed below photo instead of overlapping it */}
+          <div className="sm:hidden mt-6 w-full max-w-[280px] bg-surface-pure border border-hairline p-3 space-y-1.5 z-30">
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-[9px] text-muted tracking-widest uppercase">LOCATION</span>
+              <span className="font-mono text-[10px] font-bold text-charcoal">CHITTAGONG, BD</span>
+            </div>
+            <div className="flex items-center justify-between border-t border-hairline pt-1">
+              <div className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="font-mono text-[10px] font-bold text-emerald-700 dark:text-emerald-400 uppercase">
+                  Open to work
+                </span>
+              </div>
+              <span className="font-mono text-[10px] text-muted">{localTime}</span>
             </div>
           </div>
         </div>
