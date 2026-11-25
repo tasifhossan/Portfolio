@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     let emailSent = false;
     const resendApiKey = process.env.RESEND_API_KEY?.replace(/^["']|["']$/g, "").trim();
     const toEmail =
-      process.env.CONTACT_TO_EMAIL?.replace(/^["']|["']$/g, "").trim() || "contact@tasifhossan.dev";
+      process.env.CONTACT_TO_EMAIL?.replace(/^["']|["']$/g, "").trim() || "tasifhossan01@gmail.com";
 
     if (resendApiKey && resendApiKey.startsWith("re_") && !resendApiKey.includes("1234567890")) {
       try {
@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
             <p><strong>Date:</strong> ${new Date().toISOString()}</p>
             <hr />
             <p><strong>Message:</strong></p>
-            <blockquote style="background:#f4f4f5;padding:12px;border-left:4px solid #06b6d4;margin:12px 0;font-family:sans-serif;line-height:1.5;">
+            <blockquote style="background:#f4f4f5;padding:12px;border-left:4px solid #1F4BFF;margin:12px 0;font-family:sans-serif;line-height:1.5;">
               ${message.replace(/\n/g, "<br>")}
             </blockquote>
           `,

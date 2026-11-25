@@ -9,6 +9,7 @@ export function ContactSection() {
   const [intent, setIntent] = useState<string>("hiring");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,9 +29,10 @@ export function ContactSection() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
 
     const intentMap: Record<string, string> = {
       hiring: "Hiring [Full-Time]",
@@ -39,31 +41,37 @@ export function ContactSection() {
     };
     const intentLabel = intentMap[intent] || "General Inquiry";
 
-    const subject = `[Portfolio Dispatch: ${intentLabel}] from ${formData.name}`;
-    const body = `Hi Tasif,
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          topic: intentLabel,
+          message: formData.timeline
+            ? `[Estimated Timeline: ${formData.timeline}]\n\n${formData.message}`
+            : formData.message,
+        }),
+      });
 
-Name: ${formData.name}
-Email: ${formData.email}
-Intent: ${intentLabel}
-Timeline: ${formData.timeline || "Not specified"}
+      const data = await response.json();
 
-Message:
-${formData.message}
-`;
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to transmit message. Please try again.");
+      }
 
-    const mailtoUrl = `mailto:tasifhossan01@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    // Open user's default email client with all fields pre-filled
-    window.location.href = mailtoUrl;
-
-    setTimeout(() => {
-      setIsSubmitting(false);
       setFormSubmitted(true);
-      setTimeout(() => {
-        setFormSubmitted(false);
-        setFormData({ name: "", email: "", timeline: "", message: "" });
-      }, 7000);
-    }, 400);
+      setFormData({ name: "", email: "", timeline: "", message: "" });
+    } catch (err) {
+      setErrorMessage(
+        err instanceof Error
+          ? err.message
+          : "An unexpected error occurred. Please try again or email directly."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -329,19 +337,19 @@ ${formData.message}
                     ✓
                   </div>
                   <p className="font-display text-base sm:text-lg font-bold text-charcoal">
-                    Email Client Launched
+                    Transmission Dispatched Successfully
                   </p>
                   <p className="font-mono text-xs text-muted max-w-sm mx-auto leading-relaxed">
-                    Your transmission has been prepared with all details pre-filled in your email client. Simply press &ldquo;Send&rdquo;.
+                    Thank you! Your message has been sent directly to Tasif. You will receive a follow-up via email shortly.
                   </p>
                   <div className="pt-2">
-                    <a
-                      href="mailto:tasifhossan01@gmail.com"
-                      className="inline-flex items-center gap-1.5 font-mono text-xs text-cobalt hover:underline font-semibold"
+                    <button
+                      type="button"
+                      onClick={() => setFormSubmitted(false)}
+                      className="px-3.5 py-1.5 border border-hairline bg-surface-pure hover:border-cobalt hover:text-cobalt font-mono text-xs font-semibold transition-colors cursor-pointer"
                     >
-                      <span>Or email directly: tasifhossan01@gmail.com</span>
-                      <span>↗</span>
-                    </a>
+                      Send Another Message
+                    </button>
                   </div>
                 </m.div>
               ) : (
@@ -354,6 +362,15 @@ ${formData.message}
                   className="space-y-3 md:space-y-4"
                   onSubmit={handleSubmit}
                 >
+                  {errorMessage && (
+                    <div className="p-3 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900 text-red-700 dark:text-red-400 font-mono text-xs space-y-1">
+                      <div className="font-semibold flex items-center gap-1.5">
+                        <span>⚠</span>
+                        <span>Transmission Error</span>
+                      </div>
+                      <p>{errorMessage}</p>
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     <div className="space-y-1">
                       <label
@@ -431,11 +448,11 @@ ${formData.message}
                     {isSubmitting ? (
                       <span className="inline-flex items-center gap-2">
                         <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        <span>Opening Email Client...</span>
+                        <span>Transmitting Dispatch...</span>
                       </span>
                     ) : (
                       <>
-                        <span>Send via Email Client</span>
+                        <span>Send Message</span>
                         <span>→</span>
                       </>
                     )}
