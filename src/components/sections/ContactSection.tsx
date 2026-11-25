@@ -31,14 +31,39 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const intentMap: Record<string, string> = {
+      hiring: "Hiring [Full-Time]",
+      freelance: "Project / Freelance",
+      collab: "Technical Collaboration",
+    };
+    const intentLabel = intentMap[intent] || "General Inquiry";
+
+    const subject = `[Portfolio Dispatch: ${intentLabel}] from ${formData.name}`;
+    const body = `Hi Tasif,
+
+Name: ${formData.name}
+Email: ${formData.email}
+Intent: ${intentLabel}
+Timeline: ${formData.timeline || "Not specified"}
+
+Message:
+${formData.message}
+`;
+
+    const mailtoUrl = `mailto:tasifhossan01@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open user's default email client with all fields pre-filled
+    window.location.href = mailtoUrl;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setFormSubmitted(true);
       setTimeout(() => {
         setFormSubmitted(false);
         setFormData({ name: "", email: "", timeline: "", message: "" });
-      }, 4500);
-    }, 600);
+      }, 7000);
+    }, 400);
   };
 
   return (
@@ -298,17 +323,26 @@ export function ContactSection() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="p-6 md:p-8 bg-paper border border-hairline text-center space-y-2.5"
+                  className="p-6 md:p-8 bg-paper border border-hairline text-center space-y-3"
                 >
                   <div className="w-10 h-10 mx-auto bg-cobalt text-white flex items-center justify-center font-bold text-lg">
                     ✓
                   </div>
                   <p className="font-display text-base sm:text-lg font-bold text-charcoal">
-                    Transmission Dispatched Successfully
+                    Email Client Launched
                   </p>
-                  <p className="font-mono text-xs text-muted max-w-sm mx-auto">
-                    Tasif will review your brief and follow up via email within 4 hours.
+                  <p className="font-mono text-xs text-muted max-w-sm mx-auto leading-relaxed">
+                    Your transmission has been prepared with all details pre-filled in your email client. Simply press &ldquo;Send&rdquo;.
                   </p>
+                  <div className="pt-2">
+                    <a
+                      href="mailto:tasifhossan01@gmail.com"
+                      className="inline-flex items-center gap-1.5 font-mono text-xs text-cobalt hover:underline font-semibold"
+                    >
+                      <span>Or email directly: tasifhossan01@gmail.com</span>
+                      <span>↗</span>
+                    </a>
+                  </div>
                 </m.div>
               ) : (
                 <m.form
@@ -397,11 +431,11 @@ export function ContactSection() {
                     {isSubmitting ? (
                       <span className="inline-flex items-center gap-2">
                         <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        <span>Transmitting Dispatch...</span>
+                        <span>Opening Email Client...</span>
                       </span>
                     ) : (
                       <>
-                        <span>Send Message</span>
+                        <span>Send via Email Client</span>
                         <span>→</span>
                       </>
                     )}
