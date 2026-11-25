@@ -54,53 +54,76 @@ export async function POST(req: NextRequest) {
     }
 
     // 4. Send notification email via Resend
-    let emailSent = false;
     const resendApiKey = process.env.RESEND_API_KEY?.replace(/^["']|["']$/g, "").trim();
     const toEmail =
       process.env.CONTACT_TO_EMAIL?.replace(/^["']|["']$/g, "").trim() || "tasifhossan01@gmail.com";
 
-    if (resendApiKey && resendApiKey.startsWith("re_") && !resendApiKey.includes("1234567890")) {
-      try {
-        const resend = new Resend(resendApiKey);
-        await resend.emails.send({
-          from: "Portfolio Contact <onboarding@resend.dev>",
-          to: toEmail,
-          replyTo: email,
-          subject: `New Portfolio Inquiry [${topic || "General"}] from ${name}`,
-          html: `
-            <h2>New Portfolio Contact Form Submission</h2>
-            <p><strong>From:</strong> ${name} (&lt;${email}&gt;)</p>
-            <p><strong>Topic:</strong> ${topic || "General Inquiry"}</p>
-            <p><strong>Sender Email:</strong> ${email}</p>
-            <p><strong>IP:</strong> ${ip}</p>
-            <p><strong>Date:</strong> ${new Date().toISOString()}</p>
-            <hr />
-            <p><strong>Message:</strong></p>
-            <blockquote style="background:#f4f4f5;padding:12px;border-left:4px solid #1F4BFF;margin:12px 0;font-family:sans-serif;line-height:1.5;">
-              ${message.replace(/\n/g, "<br>")}
-            </blockquote>
-          `,
-        });
-        emailSent = true;
-      } catch (emailError) {
-        console.warn(
-          `[RESEND NOTICE] Could not send email via Resend. Check API key:`,
-          emailError instanceof Error ? emailError.message : emailError
-        );
-      }
-    } else {
-      console.info(
-        `[DEV MOCK EMAIL] Resend API key not configured or using default mock. Submission from ${name} logged safely.`
+    if (!resendApiKey) {
+      console.error("[RESEND CONFIG ERROR] RESEND_API_KEY is missing from environment variables.");
+      return NextResponse.json(
+        {
+          error:
+            "RESEND_API_KEY is not configured in Vercel environment variables. Please add RESEND_API_KEY to your project settings.",
+        },
+        { status: 500 }
       );
     }
 
-    return NextResponse.json({
-      success: true,
-      message: "Thank you, Tasif has received your message and will get back to you shortly!",
-      details: {
-        emailSent,
-      },
-    });
+    try {
+      const resend = new Resend(resendApiKey);
+      const { data, error } = await resend.emails.send({
+        from: "Portfolio Contact <onboarding@resend.dev>",
+        to: toEmail,
+        replyTo: email,
+        subject: `New Portfolio Inquiry [${topic || "General"}] from ${name}`,
+        html: `
+          <h2>New Portfolio Contact Form Submission</h2>
+          <p><strong>From:</strong> ${name} (&lt;${email}&gt;)</p>
+          <p><strong>Topic:</strong> ${topic || "General Inquiry"}</p>
+          <p><strong>Sender Email:</strong> ${email}</p>
+          <p><strong>IP:</strong> ${ip}</p>
+          <p><strong>Date:</strong> ${new Date().toISOString()}</p>
+          <hr />
+          <p><strong>Message:</strong></p>
+          <blockquote style="background:#f4f4f5;padding:12px;border-left:4px solid #1F4BFF;margin:12px 0;font-family:sans-serif;line-height:1.5;">
+            ${message.replace(/\n/g, "<br>")}
+          </blockquote>
+        `,
+      });
+
+      if (error) {
+        console.error("[RESEND DELIVERY ERROR]", error);
+        return NextResponse.json(
+          {
+            error: error.message || "Email delivery failed via Resend.",
+            details: error,
+          },
+          { status: 400 }
+        );
+      }
+
+      console.info(`[RESEND SUCCESS] Dispatched email ID: ${data?.id} to ${toEmail}`);
+
+      return NextResponse.json({
+        success: true,
+        message: "Thank you, Tasif has received your message and will get back to you shortly!",
+        details: {
+          id: data?.id,
+          emailSent: true,
+        },
+      });
+    } catch (emailError) {
+      console.error("[RESEND EXCEPTION]", emailError);
+      return NextResponse.json(
+        {
+          error:
+            emailError instanceof Error
+              ? emailError.message
+              : "Failed to send email via Resend.",
+        },
+        { status: 500 }
+      );
+    }
   } catch (error) {
     console.error("[CONTACT API ERROR]", error);
     return NextResponse.json(
