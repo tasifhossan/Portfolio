@@ -78,7 +78,7 @@ export function ContactSection() {
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 </div>
                 <p className="font-display text-base md:text-lg font-bold text-charcoal">
-                  Currently booking Q2/Q3 2025 projects
+                  Currently booking 2026 projects
                 </p>
                 <div className="p-2 bg-paper border border-hairline font-mono text-[10px] md:text-[11px] text-muted flex items-center gap-1.5">
                   <span>⚡</span>
@@ -123,7 +123,8 @@ export function ContactSection() {
                 </div>
               </Reveal>
 
-              {/* Phone Card */}
+              {/* TODO: add real number - phone row hidden until real phone number is provided */}
+              {/*
               <Reveal delay={0.18}>
                 <div className="bg-surface-pure border border-hairline p-3 md:p-3.5 flex items-center justify-between">
                   <div>
@@ -156,6 +157,7 @@ export function ContactSection() {
                   </button>
                 </div>
               </Reveal>
+              */}
 
               {/* WhatsApp Card */}
               <Reveal delay={0.24}>
@@ -194,7 +196,7 @@ export function ContactSection() {
 
             {/* Social Icon Links Tiles */}
             <Reveal delay={0.3}>
-              <div className="grid grid-cols-4 gap-1.5 sm:gap-2 pt-1">
+              <div className="grid grid-cols-2 gap-1.5 sm:gap-2 pt-1">
                 <a
                   className="p-2 sm:p-2.5 bg-surface-pure border border-hairline text-center font-mono text-[9px] sm:text-[10px] text-charcoal hover:border-cobalt hover:text-cobalt transition-colors"
                   href="https://github.com/tasifhossan"
@@ -211,6 +213,8 @@ export function ContactSection() {
                 >
                   LINKEDIN
                 </a>
+                {/* TODO: provide real X profile URL - hidden until provided */}
+                {/*
                 <a
                   className="p-2 sm:p-2.5 bg-surface-pure border border-hairline text-center font-mono text-[9px] sm:text-[10px] text-charcoal hover:border-cobalt hover:text-cobalt transition-colors"
                   href="https://x.com"
@@ -219,6 +223,9 @@ export function ContactSection() {
                 >
                   X [TWTR]
                 </a>
+                */}
+                {/* TODO: provide real Facebook profile URL - hidden until provided */}
+                {/*
                 <a
                   className="p-2 sm:p-2.5 bg-surface-pure border border-hairline text-center font-mono text-[9px] sm:text-[10px] text-charcoal hover:border-cobalt hover:text-cobalt transition-colors"
                   href="https://facebook.com"
@@ -227,6 +234,7 @@ export function ContactSection() {
                 >
                   FB [COMM]
                 </a>
+                */}
               </div>
             </Reveal>
           </div>
@@ -358,7 +366,7 @@ export function ContactSection() {
                     <input
                       className="w-full bg-paper border border-hairline px-3 md:px-3.5 py-2 md:py-2.5 font-body text-xs md:text-sm text-charcoal focus:border-cobalt focus:ring-0 focus:outline-none transition-colors"
                       id="timeline"
-                      placeholder="Immediate / Q2-Q3 2025"
+                      placeholder="Immediate / 2026"
                       type="text"
                       value={formData.timeline}
                       onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}

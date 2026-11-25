@@ -10,6 +10,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/project",
+        destination: "/projects",
+        permanent: true,
+      },
+      {
+        source: "/project/:slug",
+        destination: "/projects/:slug",
+        permanent: true,
+      },
+    ];
+  },
   turbopack: {
     rules: {
       "*.css": {

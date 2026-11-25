@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingSocialRail } from "@/components/FloatingSocialRail";
 import { MotionProvider } from "@/components/motion/MotionProvider";
+import { SmoothScroll } from "@/components/SmoothScroll";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -36,14 +37,14 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://tasif-dev.vercel.app"),
-  title: "Mohammad Tasif Hossan (Tasif) // Full-Stack Developer & Systems Architect",
+  title: "Mohammad Tasif Hossan (Tasif) // Full-Stack Software Engineer",
   description:
-    "Full-Stack Developer & Systems Architect building reliable, high-throughput backends and clean, mathematically precise web applications.",
+    "Full-Stack Software Engineer building reliable backends, high-concurrency APIs, and mathematically precise web applications.",
   keywords: [
     "Mohammad Tasif Hossan",
     "Tasif",
     "Full-Stack Developer",
-    "Systems Architect",
+    "Software Engineer",
     "Node.js",
     "TypeScript",
     "PostgreSQL",
@@ -71,6 +72,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className="bg-paper text-charcoal antialiased selection:bg-cobalt selection:text-white font-body min-h-screen relative"
       >
+        <SmoothScroll />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

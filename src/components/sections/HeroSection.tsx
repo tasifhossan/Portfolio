@@ -2,10 +2,11 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { HeroBackground } from "@/components/HeroBackground";
 
 const rotatingRoles = [
   "Full-Stack Developer",
-  "Backend Systems Architect",
+  "Backend Software Engineer",
   "Deterministic UI Builder",
 ];
 
@@ -90,6 +91,8 @@ export function HeroSection() {
       id="hero"
       className="relative lg:h-[calc(100vh-4rem)] lg:min-h-[640px] lg:max-h-[920px] flex flex-col justify-between border-b border-hairline bg-paper drafting-grid overflow-hidden pt-3 lg:pt-0 pb-0"
     >
+      <HeroBackground />
+
       {/* Top Blueprint Metadata Hairlines */}
       <div className="w-full border-b border-hairline px-4 md:px-10 py-1.5 flex items-center justify-between font-mono text-[9px] md:text-[11px] text-muted-light select-none">
         <span>+ 22.3569° N, 91.7832° E // ARCHITECTURAL DRAFTING SYSTEM</span>
@@ -110,7 +113,7 @@ export function HeroSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
             <span className="font-mono text-[10px] md:text-xs font-semibold text-charcoal uppercase tracking-wider">
-              Open to work <span className="hidden sm:inline">{"// Q2-Q3 2025"}</span>
+              Open to work <span className="hidden sm:inline">{"// 2026"}</span>
             </span>
           </div>
 
@@ -187,7 +190,7 @@ export function HeroSection() {
               [ STACK: NODE · TS · POSTGRES · NEXT.JS ]
             </span>
             <span className="px-2.5 py-1 bg-surface-pure border border-hairline font-mono text-[10px] text-muted tracking-wider uppercase">
-              [ AVAILABILITY: IMMEDIATE / Q2-Q3 2025 ]
+              [ AVAILABILITY: IMMEDIATE / 2026 ]
             </span>
           </div>
 
@@ -195,7 +198,7 @@ export function HeroSection() {
           <div className="w-full sm:hidden grid grid-cols-1 gap-1.5 pt-1 font-mono text-[10px]">
             <div className="p-2 bg-surface-pure border border-hairline flex items-center justify-between">
               <span className="text-muted uppercase">ROLE</span>
-              <span className="font-bold text-charcoal">FULL-STACK / SYSTEMS ARCHITECT</span>
+              <span className="font-bold text-charcoal">FULL-STACK SOFTWARE ENGINEER</span>
             </div>
             <div className="p-2 bg-surface-pure border border-hairline flex items-center justify-between">
               <span className="text-muted uppercase">CORE STACK</span>

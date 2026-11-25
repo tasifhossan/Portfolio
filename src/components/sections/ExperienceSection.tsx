@@ -62,7 +62,7 @@ export function ExperienceSection() {
             {/* Registration Coordinates */}
             <div className="w-full flex justify-between font-mono text-[9px] md:text-[10px] text-muted-light pt-4 md:pt-6 border-t border-hairline sm:border-t-0 sm:pt-0 sm:absolute sm:bottom-3 sm:left-4 sm:right-4">
               <span className="sm:text-left">COORD: [05/EXP_NULL_POINTER]</span>
-              <span className="sm:text-right">REF: DIRECT_HIRE_2025</span>
+              <span className="sm:text-right">REF: DIRECT_HIRE_2026</span>
             </div>
           </div>
         </Reveal>

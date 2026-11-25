@@ -83,10 +83,10 @@ export function AboutSection() {
                 </h3>
                 <div className="space-y-3.5 font-body text-sm sm:text-base text-muted leading-relaxed">
                   <p>
-                    I am <strong className="text-charcoal font-semibold">Mohammad Tasif Hossan</strong> (Tasif)—a full-stack software engineer and systems architect specializing in high-throughput Node.js microservices, strict TypeScript contracts, PostgreSQL relational optimization, and deterministic Next.js applications.
+                    I am <strong className="text-charcoal font-semibold">Mohammad Tasif Hossan</strong> (Tasif)—a full-stack software engineer specializing in Node.js backend services, strict TypeScript contracts, PostgreSQL relational databases, and deterministic Next.js applications.
                   </p>
                   <p>
-                    With four years of disciplined engineering rooted in algorithmic problem-solving and distributed system foundations, I design resilient data layers, low-latency API architectures, and accessible interfaces that perform effortlessly under heavy production load.
+                    With engineering foundations rooted in algorithmic problem-solving and full-stack software development, I build resilient data layers, structured API architectures, and accessible interfaces that perform predictably.
                   </p>
                   <p>
                     My approach treats software as structural engineering: strict type safety across boundaries, optimized database execution plans, clean asynchronous pipelines, and interfaces that eliminate cognitive friction for end users.
@@ -100,7 +100,7 @@ export function AboutSection() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 border-t border-hairline pt-4 font-mono text-[11px]">
                 <div className="space-y-0.5">
                   <span className="text-muted block text-[10px] uppercase">[ ROLE ]</span>
-                  <span className="font-semibold text-charcoal">Full-Stack / Systems Architect</span>
+                  <span className="font-semibold text-charcoal">Full-Stack Software Engineer</span>
                 </div>
                 <div className="space-y-0.5">
                   <span className="text-muted block text-[10px] uppercase">[ LOCATION ]</span>

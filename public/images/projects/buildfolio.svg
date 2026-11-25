@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-buildfolio" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#0e1726"/>
+      <stop offset="100%" stop-color="#0B0F19"/>
+    </linearGradient>
+    <linearGradient id="cobalt-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#5EEAD4"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1F2A3F" stroke-width="0.75" stroke-dasharray="2,2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg-buildfolio)"/>
+  <rect width="800" height="500" fill="url(#grid)" opacity="0.4"/>
+  <circle cx="700" cy="100" r="160" fill="#3B82F6" opacity="0.08"/>
+
+  <!-- Blueprint Window Mockup -->
+  <rect x="50" y="45" width="700" height="410" rx="8" fill="#111726" stroke="#1F2A3F" stroke-width="1.5"/>
+  <rect x="50" y="45" width="700" height="40" rx="8" fill="#172033"/>
+  <circle cx="75" cy="65" r="4.5" fill="#EF4444"/>
+  <circle cx="92" cy="65" r="4.5" fill="#F59E0B"/>
+  <circle cx="109" cy="65" r="4.5" fill="#10B981"/>
+  <rect x="140" y="57" width="260" height="16" rx="4" fill="#0B0F19" stroke="#1F2A3F" stroke-width="1"/>
+  <text x="155" y="69" fill="#5EEAD4" font-family="monospace" font-size="10">buildfolio.app/@tasif/editor</text>
+
+  <!-- Left Sidebar (DnD Section Reordering) -->
+  <rect x="70" y="105" width="180" height="330" rx="6" fill="#0B0F19" stroke="#1F2A3F" stroke-width="1"/>
+  <text x="85" y="130" fill="#5EEAD4" font-family="monospace" font-size="11" font-weight="bold">[ SECTIONS_ORDER ]</text>
+  
+  <rect x="85" y="145" width="150" height="34" rx="4" fill="#172033" stroke="#3B82F6" stroke-width="1"/>
+  <text x="100" y="166" fill="#FFFFFF" font-family="monospace" font-size="11">:: Hero Header</text>
+  
+  <rect x="85" y="188" width="150" height="34" rx="4" fill="#172033" stroke="#1F2A3F" stroke-width="1"/>
+  <text x="100" y="209" fill="#94A3B8" font-family="monospace" font-size="11">:: Projects Grid</text>
+
+  <rect x="85" y="231" width="150" height="34" rx="4" fill="#172033" stroke="#1F2A3F" stroke-width="1"/>
+  <text x="100" y="252" fill="#94A3B8" font-family="monospace" font-size="11">:: Experience</text>
+
+  <rect x="85" y="274" width="150" height="34" rx="4" fill="#172033" stroke="#1F2A3F" stroke-width="1"/>
+  <text x="100" y="295" fill="#94A3B8" font-family="monospace" font-size="11">:: Skills Matrix</text>
+
+  <rect x="85" y="325" width="150" height="28" rx="4" fill="#3B82F6" opacity="0.2" stroke="#3B82F6" stroke-width="1"/>
+  <text x="110" y="343" fill="#5EEAD4" font-family="monospace" font-size="10">+ ADD SECTION</text>
+
+  <!-- Right Split-Pane (Live Preview) -->
+  <rect x="265" y="105" width="465" height="330" rx="6" fill="#0B0F19" stroke="#1F2A3F" stroke-width="1"/>
+  <rect x="280" y="120" width="435" height="24" rx="4" fill="#172033"/>
+  <text x="295" y="136" fill="#5EEAD4" font-family="monospace" font-size="10">LIVE_PREVIEW // DUAL-PANE VIEWPORT</text>
+
+  <rect x="280" y="155" width="280" height="70" rx="6" fill="#172033" stroke="#1F2A3F" stroke-width="1"/>
+  <rect x="300" y="172" width="140" height="12" rx="3" fill="#3B82F6"/>
+  <rect x="300" y="193" width="220" height="8" rx="2" fill="#475569"/>
+
+  <rect x="580" y="155" width="135" height="70" rx="6" fill="#172033" stroke="#1F2A3F" stroke-width="1"/>
+  <text x="595" y="180" fill="#94A3B8" font-family="monospace" font-size="9">THEME_ACCENT</text>
+  <circle cx="605" cy="202" r="8" fill="#3B82F6"/>
+  <circle cx="628" cy="202" r="8" fill="#5EEAD4"/>
+  <circle cx="651" cy="202" r="8" fill="#EC4899"/>
+
+  <rect x="280" y="240" width="210" height="110" rx="6" fill="#172033" stroke="#1F2A3F" stroke-width="1"/>
+  <rect x="300" y="255" width="100" height="10" rx="2" fill="#5EEAD4"/>
+  <rect x="300" y="275" width="170" height="6" rx="2" fill="#475569"/>
+  <rect x="300" y="290" width="150" height="6" rx="2" fill="#475569"/>
+  <rect x="300" y="315" width="80" height="18" rx="3" fill="#3B82F6" opacity="0.3"/>
+
+  <rect x="505" y="240" width="210" height="110" rx="6" fill="#172033" stroke="#1F2A3F" stroke-width="1"/>
+  <rect x="525" y="255" width="100" height="10" rx="2" fill="#3B82F6"/>
+  <rect x="525" y="275" width="170" height="6" rx="2" fill="#475569"/>
+  <rect x="525" y="290" width="150" height="6" rx="2" fill="#475569"/>
+  <rect x="525" y="315" width="80" height="18" rx="3" fill="#5EEAD4" opacity="0.3"/>
+
+  <!-- Footer Brand -->
+  <text x="60" y="475" fill="#5EEAD4" font-family="monospace" font-size="11">BUILDFOLIO // MULTI-TENANT ARCHITECTURE SPEC</text>
+</svg>

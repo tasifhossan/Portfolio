@@ -45,7 +45,8 @@ export function FloatingSocialRail() {
         </span>
       </a>
 
-      {/* X (Twitter) */}
+      {/* TODO: provide real X profile URL - hidden until provided */}
+      {/*
       <a
         aria-label="X Profile"
         className="p-2 text-charcoal hover:text-cobalt hover:bg-paper transition-colors group relative"
@@ -60,8 +61,10 @@ export function FloatingSocialRail() {
           X [TWTR]
         </span>
       </a>
+      */}
 
-      {/* Facebook */}
+      {/* TODO: provide real Facebook profile URL - hidden until provided */}
+      {/*
       <a
         aria-label="Facebook Profile"
         className="p-2 text-charcoal hover:text-cobalt hover:bg-paper transition-colors group relative"
@@ -76,6 +79,7 @@ export function FloatingSocialRail() {
           FACEBOOK
         </span>
       </a>
+      */}
 
       {/* Email */}
       <Link

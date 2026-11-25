@@ -22,6 +22,7 @@ export const socialsData: SocialLink[] = [
   },
   {
     name: "Twitter / X",
+    // TODO: provide real X profile URL
     // [TWITTER URL] placeholder
     url: "[TWITTER URL] https://x.com/tasifhossan",
     label: "Twitter / X Profile",
@@ -29,6 +30,7 @@ export const socialsData: SocialLink[] = [
   },
   {
     name: "Facebook",
+    // TODO: provide real Facebook profile URL
     // [FACEBOOK URL] placeholder
     url: "[FACEBOOK URL] https://facebook.com/tasifhossan",
     label: "Facebook Profile",

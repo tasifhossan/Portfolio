@@ -50,6 +50,7 @@ export const profileData: Profile = {
   location: "Chittagong, Bangladesh",
   availability: "Available for full-time engineering roles & contract consulting",
   email: "tasifhossan@gmail.com",
+  // TODO: add real number
   phone: "+880 1800-000000",
   whatsappNumber: "8801800000000",
   githubUrl: "https://github.com/tasifhossan",
@@ -136,6 +137,7 @@ export const profileData: Profile = {
     "System Design Whitepapers",
     "Mechanical Keyboards",
   ],
+  // TODO: verify project years (2022–2024)
   milestones: [
     {
       year: "[EDIT ME] 2022",
@@ -153,7 +155,7 @@ export const profileData: Profile = {
       description: "[EDIT ME] Shipped scalable full-stack applications with rate limiting, secure authentication, and CI/CD pipelines.",
     },
     {
-      year: "[EDIT ME] 2025 – Present",
+      year: "[EDIT ME] 2026 – Present",
       title: "[EDIT ME] Architectural Focus",
       description: "[EDIT ME] Delivering resilient APIs, full-stack enterprise solutions, and high-performance developer experiences.",
     },

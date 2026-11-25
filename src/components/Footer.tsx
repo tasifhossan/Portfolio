@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { m, AnimatePresence, useReducedMotion } from "framer-motion";
 
 export function Footer() {
@@ -34,7 +35,7 @@ export function Footer() {
             </span>
           </div>
           <p className="font-body text-xs text-muted-light max-w-sm leading-relaxed">
-            Full-Stack Software Engineer &amp; Systems Architect. Engineered with mathematical precision on a strict 12-column Swiss typographic grid.
+            Full-Stack Software Engineer. Engineered with mathematical precision on a strict 12-column Swiss typographic grid.
           </p>
           <div className="font-mono text-[10px] md:text-[11px] text-cobalt-light pt-1">
             STACK: Node.js • Express • TypeScript • PostgreSQL • Next.js
@@ -48,34 +49,39 @@ export function Footer() {
           </span>
           <ul className="grid grid-cols-2 md:grid-cols-1 gap-1.5 font-mono text-xs">
             <li>
-              <a className="text-white/80 hover:text-white transition-colors" href="#hero">
+              <Link className="text-white/80 hover:text-white transition-colors" href="/#hero">
                 01 // HOME
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white/80 hover:text-white transition-colors" href="#about">
+              <Link className="text-white/80 hover:text-white transition-colors" href="/#about">
                 02 // ABOUT ME
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white/80 hover:text-white transition-colors" href="#projects">
-                03 // SELECTED WORKS
-              </a>
+              <Link className="text-white/80 hover:text-white transition-colors" href="/projects">
+                03 // ALL PROJECTS [DIR]
+              </Link>
             </li>
             <li>
-              <a className="text-white/80 hover:text-white transition-colors" href="#skills">
-                04 // SYSTEM SPECS
-              </a>
+              <Link className="text-white/80 hover:text-white transition-colors" href="/#projects">
+                04 // SELECTED WORKS
+              </Link>
             </li>
             <li>
-              <a className="text-white/80 hover:text-white transition-colors" href="#education">
-                05 // EDUCATION
-              </a>
+              <Link className="text-white/80 hover:text-white transition-colors" href="/#skills">
+                05 // SYSTEM SPECS
+              </Link>
             </li>
             <li>
-              <a className="text-white/80 hover:text-white transition-colors" href="#contact">
-                06 // CONTACT
-              </a>
+              <Link className="text-white/80 hover:text-white transition-colors" href="/#education">
+                06 // EDUCATION
+              </Link>
+            </li>
+            <li>
+              <Link className="text-white/80 hover:text-white transition-colors" href="/#contact">
+                07 // CONTACT
+              </Link>
             </li>
           </ul>
         </div>
@@ -119,7 +125,7 @@ export function Footer() {
 
       {/* Bottom Bar with Conditional Animated Back to Top */}
       <div className="max-w-[1440px] mx-auto px-4 md:px-10 py-4 md:py-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[10px] md:text-[11px] text-muted-light">
-        <div>© 2025 MOHAMMAD TASIF HOSSAN. ALL RIGHTS RESERVED. ARCHITECTURAL MINIMALISM.</div>
+        <div>© 2026 MOHAMMAD TASIF HOSSAN. ALL RIGHTS RESERVED. ARCHITECTURAL MINIMALISM.</div>
 
         <div className="min-h-[28px] flex items-center">
           <AnimatePresence>

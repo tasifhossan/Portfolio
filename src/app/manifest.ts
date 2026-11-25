@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Mohammad Tasif Hossan — Full-Stack Developer",
+    name: "Mohammad Tasif Hossan // Full-Stack Developer",
     short_name: "Tasif Dev",
-    description: "Production portfolio of Mohammad Tasif Hossan, full-stack and backend systems architect.",
+    description: "Production portfolio of Mohammad Tasif Hossan, full-stack software engineer.",
     start_url: "/",
     display: "standalone",
     background_color: "#0B0F19",

@@ -262,6 +262,7 @@ export function SkillsSection() {
                 Disciplined Mastery
               </h2>
             </div>
+            {/* TODO: verify "99.9% coverage" claim */}
             <p className="font-mono text-[10px] md:text-xs text-muted">
               STANDARDS: RIGOROUS TYPE SAFETY // 99.9% COVERAGE
             </p>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-land" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#0f1f1d"/>
+      <stop offset="100%" stop-color="#0B0F19"/>
+    </linearGradient>
+    <pattern id="grid-land" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1F2A3F" stroke-width="0.75" stroke-dasharray="2,2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg-land)"/>
+  <rect width="800" height="500" fill="url(#grid-land)" opacity="0.4"/>
+  <circle cx="680" cy="120" r="160" fill="#10B981" opacity="0.08"/>
+
+  <!-- Window Mockup -->
+  <rect x="50" y="45" width="700" height="410" rx="8" fill="#111726" stroke="#1F2A3F" stroke-width="1.5"/>
+  <rect x="50" y="45" width="700" height="40" rx="8" fill="#172033"/>
+  <circle cx="75" cy="65" r="4.5" fill="#EF4444"/>
+  <circle cx="92" cy="65" r="4.5" fill="#F59E0B"/>
+  <circle cx="109" cy="65" r="4.5" fill="#10B981"/>
+  <rect x="140" y="57" width="220" height="16" rx="4" fill="#0B0F19"/>
+  <text x="155" y="69" fill="#10B981" font-family="monospace" font-size="10">landmarkbd.com/insights</text>
+
+  <!-- Market Stats Banner -->
+  <rect x="75" y="105" width="650" height="90" rx="6" fill="#0B0F19" stroke="#1F2A3F" stroke-width="1"/>
+  <text x="95" y="128" fill="#10B981" font-family="monospace" font-size="10">BANGLADESH PROPERTY INDEX (DHAKA / SYLHET)</text>
+  <text x="95" y="158" fill="#FFFFFF" font-family="monospace" font-size="20" font-weight="bold">Dhaka Real Estate Yield: +14.2%</text>
+  <text x="95" y="178" fill="#94A3B8" font-family="monospace" font-size="10">Tailwind CSS Responsive Breakdown · Commercial &amp; Residential</text>
+
+  <!-- Property Cards Grid -->
+  <rect x="75" y="210" width="315" height="220" rx="6" fill="#0B0F19" stroke="#1F2A3F" stroke-width="1"/>
+  <rect x="90" y="225" width="285" height="95" rx="4" fill="#172033"/>
+  <text x="90" y="345" fill="#FFFFFF" font-family="monospace" font-size="12" font-weight="bold">Gulshan Luxury Suites</text>
+  <text x="90" y="365" fill="#94A3B8" font-family="monospace" font-size="10">Dhaka North · 3,400 sq.ft</text>
+  <text x="90" y="395" fill="#10B981" font-family="monospace" font-size="13" font-weight="bold">BDT 4.85 Cr</text>
+
+  <rect x="410" y="210" width="315" height="220" rx="6" fill="#0B0F19" stroke="#1F2A3F" stroke-width="1"/>
+  <rect x="425" y="225" width="285" height="95" rx="4" fill="#172033"/>
+  <text x="425" y="345" fill="#FFFFFF" font-family="monospace" font-size="12" font-weight="bold">Shahjalal Hills Residence</text>
+  <text x="425" y="365" fill="#94A3B8" font-family="monospace" font-size="10">Sylhet Suburban · 2,800 sq.ft</text>
+  <text x="425" y="395" fill="#10B981" font-family="monospace" font-size="13" font-weight="bold">BDT 2.40 Cr</text>
+
+  <text x="60" y="475" fill="#10B981" font-family="monospace" font-size="11">LANDMARKBD // REAL ESTATE INTELLIGENCE PORTAL</text>
+</svg>
