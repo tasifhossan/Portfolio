@@ -56,7 +56,6 @@ export function AboutSection() {
                   alt="Mohammad Tasif Hossan Portrait"
                   width={380}
                   height={450}
-                  priority
                   className="w-full h-full object-cover object-top grayscale contrast-110"
                 />
                 {/* Rotated Vertical Monospace Label */}
